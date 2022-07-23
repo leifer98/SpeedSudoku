@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/headline_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="30dp"
+        android:text="Setting"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/setting_points_multiplayer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headline_setting"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="multiplayer"
+            android:textColor="@color/black"
+
+            />
+
+        <TextView
+            android:id="@+id/text_label_multiplayer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="5"
+            android:textColor="@color/black"
+
+            />
+
+        <SeekBar
+            android:id="@+id/seekbar_setting_multiplayer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:max="10"
+            android:min="1"
+            android:progress="5"
+            android:progressBackgroundTint="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_turn_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_points_multiplayer_layout"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="turn time"
+            android:textColor="@color/black"
+
+            />
+
+        <TextView
+            android:id="@+id/text_label_turn_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="00:30"
+            android:textColor="@color/black"
+
+            />
+
+        <SeekBar
+            android:id="@+id/seekbar_setting_turn_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:max="240"
+            android:min="15"
+            android:progress="30"
+            android:progressBackgroundTint="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_advantage_win_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_turn_time_layout"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="advantage win"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/text_label_advantage_win"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="1500"
+            android:textColor="@color/black"/>
+
+        <SeekBar
+            android:id="@+id/seekbar_setting_advantage_win"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:max="4000"
+            android:min="500"
+            android:progress="1500"
+            android:progressBackgroundTint="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_flip_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_advantage_win_layout"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="screen flip"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/text_label_flip_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="OFF"
+            android:textColor="@color/black"/>
+
+        <Switch
+            android:id="@+id/switch_setting_flip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:checked="false" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setting_wrong_answers_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setting_flip_layout"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="delete mistakes"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/text_label_wrong_answers_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:text="ON"
+            android:textColor="@color/black"/>
+
+        <Switch
+            android:id="@+id/switch_setting_wrong_answers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:checked="true" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:onClick="exitClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="exit"
+        android:textSize="12sp"
+        android:background="@drawable/bg_rounded_black"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:id="@+id/btn_newgame"
+        android:onClick="newGameClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="new game"
+        android:textSize="12sp"
+        android:background="@drawable/bg_rounded_black"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="-20dp"
+    android:background="#4D262626"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:layout_weight="0.6"
+        android:background="@drawable/bg_rounded_white"
+        android:baselineAligned="false">
+
+        <ImageButton
+            android:id="@+id/egm_btn_exit"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:background="#00262626"
+            android:onClick="exitClick"
+            android:scaleType="fitCenter"
+            android:scaleX="-1"
+            android:src="@drawable/exit_black" />
+
+        <ImageButton
+            android:id="@+id/egm_btn_add_friend"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:background="#00262626"
+            android:onClick="addFriendClick"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add_friend" />
+
+        <TextView
+            android:id="@+id/egm_player_message_won"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="You won !"
+            android:textColor="@color/green"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/egm_reason_message_won"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/egm_player_message_won"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:text="Leifer won by a significant 1000 points gap"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/egm_linear_layout_cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/egm_rating_title"
+            android:layout_below="@id/egm_reason_message_won"
+            android:orientation="horizontal"
+            android:paddingHorizontal="5dp">
+
+            <RelativeLayout
+                android:id="@+id/egm_user1card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:background="@drawable/bg_rounded_green"
+                android:paddingHorizontal="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/egm_user1name"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/person"
+
+                    />
+
+                <TextView
+                    android:id="@+id/egm_user1name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Guest"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+
+
+                <TextView
+                    android:id="@+id/egm_overall_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:text="1 - 0"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/egm_user2card"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:background="@drawable/bg_rounded_white"
+                android:paddingHorizontal="5dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/egm_user2name"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/person" />
+
+                <TextView
+                    android:id="@+id/egm_user2name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Guest"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/egm_rating_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/egm_player_rating"
+            android:gravity="center"
+            android:text="rating"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/egm_player_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/egm_button_layout"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="1310"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/egm_rating_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/egm_player_rating"
+            android:layout_alignBottom="@id/egm_player_rating"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/egm_player_rating"
+            android:gravity="center"
+            android:text="+8"
+            android:textColor="@color/green"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/egm_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/egm_btn_rematch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/bg_rounded_black"
+                android:onClick="rematchClick"
+                android:text="rematch"
+                android:textSize="12sp"
+                app:backgroundTint="@color/white"
+                app:backgroundTintMode="multiply" />
+
+            <Button
+                android:id="@+id/egm_btn_exit_game"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/bg_rounded_black"
+                android:onClick="exitClick"
+                android:text="exit"
+                android:textSize="12sp"
+                app:backgroundTint="@color/white"
+                app:backgroundTintMode="multiply" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
+</LinearLayout>

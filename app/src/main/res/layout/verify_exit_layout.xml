@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#4D262626"
+    android:padding="30dp"
+    android:clickable="true"
+    android:layout_margin="-20dp"
+    tools:ignore="MissingDefaultResource"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_rounded_white"
+        android:layout_centerInParent="true"
+        android:layout_weight="0.4">
+
+        <TextView
+            android:id="@+id/txt_label_paused"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Abort"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginVertical="10dp"/>
+
+        <TextView
+            android:id="@+id/message_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_label_paused"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="10dp"
+            android:text="are you sure ?"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_exit"
+            android:onClick="exitClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="exit"
+            android:textSize="12sp"
+            android:background="@drawable/bg_rounded_black"
+            app:backgroundTint="@color/white"
+            app:backgroundTintMode="multiply"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"/>
+
+        <Button
+            android:id="@+id/btn_resume"
+            android:onClick="cancelClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cancel"
+            android:textSize="12sp"
+            android:background="@drawable/bg_rounded_black"
+            app:backgroundTint="@color/white"
+            app:backgroundTintMode="multiply"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"/>
+</LinearLayout>

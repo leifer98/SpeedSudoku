@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFriendActivity">
+    <Button
+        android:id="@+id/btn_back"
+        android:onClick="onClickBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="10dp"
+        android:visibility="visible"/>
+
+    <EditText
+        android:id="@+id/text_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="name"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btn_back"
+        android:layout_margin="15dp"
+        android:gravity="center_horizontal"
+        android:maxLines="1"/>
+
+    <ScrollView
+        android:id="@+id/friends_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_search"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:fadeScrollbars="false"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/friends_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</RelativeLayout>

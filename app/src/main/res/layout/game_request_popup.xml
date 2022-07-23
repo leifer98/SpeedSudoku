@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_rounded_white">
+
+    <TextView
+        android:id="@+id/grPopUp_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Guest (???) wants a game"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@+id/grPopUp_reject"
+        android:layout_alignParentLeft="true"
+        android:layout_marginHorizontal="10dp"/>
+
+    <ImageButton
+        android:id="@+id/grPopUp_reject"
+        android:onClick="grPopUp_reject_onClick"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:src="@android:drawable/ic_delete"
+
+
+        android:background="@drawable/bg_rounded_black"
+        app:backgroundTint="@color/white"
+        android:layout_toLeftOf="@+id/grPopUp_confirm"
+        app:backgroundTintMode="multiply"
+        android:layout_margin="5dp"/>
+
+    <ImageButton
+        android:id="@+id/grPopUp_confirm"
+        android:onClick="grPopUp_confirm_onClick"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_rounded_black"
+        android:src="@drawable/confirm"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"/>
+
+
+</RelativeLayout>

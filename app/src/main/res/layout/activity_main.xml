@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_sign_in_and_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="10dp"
+            android:onClick="onClickSign"
+            android:text="Sign in"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_leaderboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+
+            android:layout_margin="10dp"
+            android:onClick="onClickLeaderboard"
+            android:text="Leaderboard"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/btn_leaderboard">
+
+            <TextView
+                android:id="@+id/txt_label_username"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="guest"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/txt_label_mmr"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text="Rating: ???"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_offline_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_find_game"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickOfflineGame"
+            android:text="Offline Game" />
+
+        <Button
+            android:id="@+id/btn_find_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:onClick="onClickFindGame"
+            android:text="Find Game" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/btn_find_game"
+            android:onClick="onClickSearch"
+            android:text="search friend"
+            android:visibility="invisible"/>
+
+
+
+        <TextView
+            android:id="@+id/txt_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_search"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="Hello There!" />
+
+        <ScrollView
+            android:id="@+id/friends_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_label"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:fadeScrollbars="false"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/friends_linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+    <include android:id="@+id/gr"
+        layout="@layout/game_request_popup"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/remove_popup"
+        layout="@layout/remove_popup"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/waiting_popup"
+        layout="@layout/waiting_popup"
+        android:visibility="gone"/>
+</RelativeLayout>

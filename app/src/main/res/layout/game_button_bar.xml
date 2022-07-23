@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.gridlayout.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gridLayout"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:layout_centerInParent="true"
+    app:alignmentMode="alignBounds"
+    app:columnCount="5"
+    app:rowCount="2">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_rounded_black"
+        android:insetTop="0dp"
+        android:onClick="selectButton"
+        android:text="1"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_rounded_black"
+        android:insetTop="0dp"
+        android:onClick="selectButton"
+        android:text="2"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_rounded_black"
+        android:insetTop="0dp"
+        android:onClick="selectButton"
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_rounded_black"
+        android:insetTop="0dp"
+        android:onClick="selectButton"
+        android:text="4"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_rounded_black"
+        android:insetTop="0dp"
+        android:onClick="selectButton"
+        android:text="5"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_rounded_black"
+        android:insetTop="0dp"
+        android:onClick="selectButton"
+        android:text="6"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_rounded_black"
+        android:insetTop="0dp"
+        android:onClick="selectButton"
+        android:text="7"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_rounded_black"
+        android:insetTop="0dp"
+        android:onClick="selectButton"
+        android:text="8"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_rounded_black"
+        android:insetTop="0dp"
+        android:onClick="selectButton"
+        android:text="9"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_rounded_black"
+        android:drawableTop="@android:drawable/ic_delete"
+        android:insetTop="2dp"
+        android:onClick="selectButton"
+        app:backgroundTint="@color/white"
+        app:backgroundTintMode="multiply"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1" />
+</androidx.gridlayout.widget.GridLayout>
