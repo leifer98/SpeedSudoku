@@ -152,7 +152,7 @@ public class OnlineGameActivity extends AppCompatActivity implements grPopUp {
     protected void onDestroy() {
         super.onDestroy();
         handler.removeCallbacksAndMessages(null);
-        Toast.makeText(this,"deleted callbacks _888",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"deleted callbacks _888",Toast.LENGTH_SHORT).show();
     }
 
     private void setupGame() {
@@ -178,7 +178,7 @@ public class OnlineGameActivity extends AppCompatActivity implements grPopUp {
                 }
                 if (!check) {
                     handler.postDelayed(OnlineGameActivity.this::setupGame,500);
-                    Toast.makeText(OnlineGameActivity.this,"waiting here _112",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(OnlineGameActivity.this,"waiting here _112",Toast.LENGTH_SHORT).show();
                 } else {
                     continueSetupGame();
                 }
@@ -477,7 +477,7 @@ public class OnlineGameActivity extends AppCompatActivity implements grPopUp {
 
             @Override
             public void onCancelled(@NonNull @NotNull DatabaseError error) {
-                Toast.makeText(OnlineGameActivity.this,"listener cancelled",Toast.LENGTH_SHORT).show();
+//                Toast.makeText(OnlineGameActivity.this,"listener cancelled",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -1361,7 +1361,7 @@ public class OnlineGameActivity extends AppCompatActivity implements grPopUp {
     }
 
     private void resetGame() {
-        Toast.makeText(this,"reset game",Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this,"reset game",Toast.LENGTH_SHORT).show();
 
         handler.removeCallbacksAndMessages(null);
 

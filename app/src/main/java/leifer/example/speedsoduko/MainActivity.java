@@ -491,12 +491,12 @@ public class MainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in firebaseUser's information
-                            Toast.makeText(MainActivity.this,"signInWithCredential:success",Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(MainActivity.this,"signInWithCredential:success",Toast.LENGTH_SHORT).show();
                             firebaseUser = mAuth.getCurrentUser();
                             updateUI();
                         } else {
                             // If sign in fails, display a message to the firebaseUser.
-                            Toast.makeText(MainActivity.this,"signInWithCredential:failure",Toast.LENGTH_SHORT).show();
+//                            Toast.makeText(MainActivity.this,"signInWithCredential:failure",Toast.LENGTH_SHORT).show();
                             updateUI();
                         }
                     }
@@ -726,7 +726,7 @@ public class MainActivity extends AppCompatActivity {
         ticks--;
         if (ticks == 0) {
 
-            Toast.makeText(MainActivity.this,"passed here _908",Toast.LENGTH_SHORT).show();
+//            Toast.makeText(MainActivity.this,"passed here _908",Toast.LENGTH_SHORT).show();
 
             ticks = 15;
             DaoGameBackend.grRef.child(gameRequest.getKey()).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
